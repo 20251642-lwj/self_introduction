@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> index </title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.base_div{
+			height: 100dvh;
+			background-color: gray;
+			scroll-snap-align: start;
+			position: relative;
+		}
+
+		#first{
+			overflow-y: scroll;
+			scroll-snap-type: y mandatory;
+			height: 100dvh;
+		}
+
+		.pill_box {
+			width: 200px;
+			height: 55px;
+    		position: absolute;
+    		bottom: 25%; 
+    		left: 50%;
+    		transform: translateX(-50%); 
+			border-radius: 999px;
+
+		}
+
+		#a1{
+			background-color: blue;
+		}
+
+		#a2{
+			background-color: red;
+		}
+
+		#a3{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="first">
+		<div class="base_div" id="a1">
+			<div class="pill_box"></div>
+
+		</div>
+		<div class="base_div" id="a2">
+
+		</div>
+		<div class="base_div" id="a3">
+
+		</div>
+	</div>
+	
+</body>
+</html>
