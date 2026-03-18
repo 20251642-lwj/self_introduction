@@ -9,7 +9,7 @@
 		}
 		.base_div{
 			height: 100dvh;
-			background-color: gray;
+			background-color: #231f2b;
 			scroll-snap-align: start;
 			position: relative;
 		}
@@ -20,41 +20,92 @@
 			height: 100dvh;
 		}
 
+		.base_div h1 {
+    		position: absolute;
+    		top: 30%; /* 상단 기준 35% 위치 (정중앙보다 살짝 위) */
+    		left: 50%;
+    		transform: translateX(-50%); /* 가로 정중앙 정렬 */
+    		color: #ffffff; /* 하얀색 글씨 */
+    		font-size: 3rem; /* 화면 비율에 맞춘 큰 글씨 단위 */
+    		margin: 0; /* 브라우저 기본 여백 제거 */
+		}
+
 		.pill_box {
 			width: 200px;
-			height: 55px;
+    		height: 55px;
     		position: absolute;
     		bottom: 25%; 
     		left: 50%;
     		transform: translateX(-50%); 
-			border-radius: 999px;
+    		border-radius: 999px;
+    		background: linear-gradient(to right, #8a2be2, #4b0082);
+    		transition: all 0.3s ease;
+    
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		cursor: pointer; /* 버튼임을 인지시키기 위한 마우스 포인터 변경 */
 
 		}
 
-		#a1{
-			background-color: blue;
+		.pill_box p {
+    		margin: 0;
+    		font-weight: bold; /* 이미 적용되어 있다면 유지 */
+    		color: #ffffff; /* 기존 #333333에서 흰색으로 변경 */
 		}
 
-		#a2{
-			background-color: red;
+		.pill_box:hover {
+    		width: 230px;
+    		filter: brightness(0.85);
 		}
 
-		#a3{
-			background-color: green;
+		.pill_box .text_hover {
+    		display: none;
 		}
+
+		.pill_box:hover .text_default {
+    		display: none;
+		}
+
+		.pill_box:hover .text_hover {
+    		display: inline;
+		}
+
+		/* 깃허브 링크 위치 및 스타일 제어 */
+		.github_link {
+			position: absolute;
+			top: 90%; /* 상단 기준 90% (하단에 가깝게 배치) */
+			left: 50%;
+			transform: translateX(-50%);
+			color: #ffffff; /* 하얀색 텍스트 */
+			text-decoration: none; /* 하이퍼링크 기본 밑줄 제거 */
+			font-size: 1.2rem;
+			opacity: 0.7; /* 시각적 밸런스를 위해 기본 상태에서 살짝 투명하게 처리 */
+			transition: opacity 0.3s ease;
+		}
+
+		/* 마우스 호버 시 완전히 선명해지는 효과 */
+		.github_link:hover {
+			opacity: 1; 
+		}
+
 	</style>
 </head>
 <body>
 	<div id="first">
-		<div class="base_div" id="a1">
-			<div class="pill_box"></div>
-
+		<div class="base_div">
+			<div>
+				<h1>자기소개 페이지</h1>
+			</div>
+			<div class="pill_box">
+				<p>
+            		<span class="text_default">이원준이란?</span>
+            		<span class="text_hover">알아보기</span>
+        		</p>
+			</div>
 		</div>
-		<div class="base_div" id="a2">
-
-		</div>
-		<div class="base_div" id="a3">
-
+		<div class="base_div">
+			<a href="https://github.com/본인계정" class="github_link" target="_blank" rel="noopener noreferrer">github로 가기</a>
 		</div>
 	</div>
 	
