@@ -2,10 +2,13 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> index </title>
+	<title>index</title>
 	<style>
 		body{
 			margin: 0;
+		}
+		a{
+			text-decoration: none; /* 하이퍼링크 기본 밑줄 제거 */
 		}
 		.base_div{
 			height: 100dvh;
@@ -78,7 +81,6 @@
 			left: 50%;
 			transform: translateX(-50%);
 			color: #ffffff; /* 하얀색 텍스트 */
-			text-decoration: none; /* 하이퍼링크 기본 밑줄 제거 */
 			font-size: 1.2rem;
 			opacity: 0.7; /* 시각적 밸런스를 위해 기본 상태에서 살짝 투명하게 처리 */
 			transition: opacity 0.3s ease;
@@ -97,15 +99,15 @@
 			<div>
 				<h1>자기소개 페이지</h1>
 			</div>
-			<div class="pill_box">
+			<a href="about.html" class="pill_box">
 				<p>
-            		<span class="text_default">이원준이란?</span>
-            		<span class="text_hover">알아보기</span>
-        		</p>
-			</div>
+					<span class="text_default">이원준이란?</span>
+					<span class="text_hover">알아보기</span>
+				</p>
+			</a>
 		</div>
 		<div class="base_div">
-			<a href="https://github.com/본인계정" class="github_link" target="_blank" rel="noopener noreferrer">github로 가기</a>
+			<a href="https://github.com/20251642-lwj/self_introduction" class="github_link" target="_blank" rel="noopener noreferrer">github로 가기</a>
 		</div>
 	</div>
 	
