@@ -8,7 +8,7 @@
 			margin: 0;
 		}
 		a{
-			text-decoration: none; /* 하이퍼링크 기본 밑줄 제거 */
+			text-decoration: none;
 		}
 		.base_div{
 			height: 100dvh;
@@ -25,12 +25,12 @@
 
 		.base_div h1 {
     		position: absolute;
-    		top: 30%; /* 상단 기준 35% 위치 (정중앙보다 살짝 위) */
+    		top: 30%;
     		left: 50%;
-    		transform: translateX(-50%); /* 가로 정중앙 정렬 */
-    		color: #ffffff; /* 하얀색 글씨 */
-    		font-size: 3rem; /* 화면 비율에 맞춘 큰 글씨 단위 */
-    		margin: 0; /* 브라우저 기본 여백 제거 */
+    		transform: translateX(-50%);
+    		color: #ffffff;
+    		font-size: 3rem;
+    		margin: 0;
 		}
 
 		.pill_box {
@@ -47,14 +47,14 @@
     		display: flex;
     		justify-content: center;
     		align-items: center;
-    		cursor: pointer; /* 버튼임을 인지시키기 위한 마우스 포인터 변경 */
+    		cursor: pointer; 
 
 		}
 
 		.pill_box p {
     		margin: 0;
-    		font-weight: bold; /* 이미 적용되어 있다면 유지 */
-    		color: #ffffff; /* 기존 #333333에서 흰색으로 변경 */
+    		font-weight: bold;
+    		color: #ffffff;
 		}
 
 		.pill_box:hover {
@@ -74,19 +74,17 @@
     		display: inline;
 		}
 
-		/* 깃허브 링크 위치 및 스타일 제어 */
 		.github_link {
 			position: absolute;
-			top: 90%; /* 상단 기준 90% (하단에 가깝게 배치) */
+			top: 90%;
 			left: 50%;
 			transform: translateX(-50%);
-			color: #ffffff; /* 하얀색 텍스트 */
+			color: #ffffff;
 			font-size: 1.2rem;
-			opacity: 0.7; /* 시각적 밸런스를 위해 기본 상태에서 살짝 투명하게 처리 */
+			opacity: 0.7;
 			transition: opacity 0.3s ease;
 		}
-
-		/* 마우스 호버 시 완전히 선명해지는 효과 */
+		
 		.github_link:hover {
 			opacity: 1; 
 		}

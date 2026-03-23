@@ -1,38 +1,256 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>abuot</title>
-	<style>
-		body{
-			margin: 0;
-		}
-		
-		#first{
-			overflow-y: scroll;
-			scroll-snap-type: y mandatory;
-			height: 100dvh;
-		}
+    <title>about</title>
+    <style>
+        body {
+            margin: 0;
+        }
 
-        .base_div{
-			height: 100dvh;
-			background-color: #231f2b;
-			scroll-snap-align: start;
-			position: relative;
-		}
-		
-	</style>
+        #all {
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            height: 100dvh;
+        }
+
+        .bg {
+            height: 100dvh;
+            background-color: #231f2b;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .box {
+            border-radius: 50px;
+            background-color: #2d2838;
+            color: #ffffff;
+        }
+
+        .top_box {
+            width: 50%;
+            height: 20%;
+            border-radius: 50px;
+            background-color: #8a2be2;
+            position: relative;
+            left: 25%;
+            top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top_box p {
+            margin: 0;
+            font-size: 25px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .txt_area {
+            position: relative;
+            top: 10%;
+            padding: 0 20px; 
+        }
+
+        .txt_area ul {
+            padding-left: 20px;
+        }
+
+        .txt_area li {
+            font-size: 20px;
+            line-height: 1.5; 
+            color: #ffffff;
+        }
+
+        .txt_area p.t1 {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            word-break: keep-all;
+            font-weight: normal; 
+            margin-top: 25px;
+            color: #ffffff;
+        }
+
+        .img1 {
+            position: absolute;
+            width: 30%;
+            height: auto;
+            left: 30%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .top_pos {
+            width: 40%; 
+            height: 30%; 
+            position: absolute;
+            bottom: 60%; 
+            left: 75%; 
+            transform: translateX(-50%);
+        }
+
+        .bot_pos {
+            width: 40%; 
+            height: 30%; 
+            position: absolute;
+            bottom: 20%; 
+            left: 75%; 
+            transform: translateX(-50%);
+        }
+
+        .title1 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .center_wrap {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; 
+            padding-top: 8%;
+            box-sizing: border-box;
+        }
+
+        .box_small {
+            width: 25%; 
+            height: 40%; 
+        }
+
+        .q_box {
+            width: 60%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .q_txt {
+            font-size: 24px;
+        }
+
+        .g_box {
+            width: 70%;
+            height: 50%;
+        }
+
+        .g_in {
+            top: 20%;
+        }
+
+        .g_t1 {
+            font-size: 20px ;
+            margin-bottom: 30px;
+        }
+
+        .g_t2 {
+            font-weight: bold ;
+            font-size: 22px ;
+        }
+    </style>
 </head>
 <body>
-	<div id="first">
-        <div class="base_div"></div>
+    <div id="all">
         
-        <div class="base_div"></div>
+        <div class="bg" id="page1">
+            <img src="image.png" alt="프로필 이미지" class="img1">
+
+            <div class="box top_pos">
+                <div class="top_box">
+                    <p>이원준</p>
+                </div>
+                <div class="txt_area">
+                    <ul>
+                        <li>숭실대 재학</li>
+                        <li>글로벌미디어학부 25학번</li>
+                        <li>2006년 11월 10일</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="box bot_pos">
+                <div class="top_box">
+                    <p>나는 이런 사람</p>
+                </div>
+                <div class="txt_area">
+                    <ul>
+                        <li>게임 개발자를 꿈꾸고 있으며<br>모든 일에 열정을 다하는 사람</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg" id="page2">
+            <h2 class="title1">내가 가진 장점</h2>
+            
+            <div class="center_wrap">
+                <div class="box box_small">
+                    <div class="top_box"><p>완벽 추구</p></div>
+                    <div class="txt_area">
+                        <p class="t1">프로젝트의 아주 작은 부분이나 오류도 놓치지 않고 꼼꼼하게 검토하여 완성도를 높임.</p>
+                    </div>
+                </div>
+                
+                <div class="box box_small">
+                    <div class="top_box"><p>끈기</p></div>
+                    <div class="txt_area">
+                        <p class="t1">예상 못한 문제 앞에서도 어떻게든 문제를 해결하기 위해 노력함.</p>
+                    </div>
+                </div>
+                
+                <div class="box box_small">
+                    <div class="top_box"><p>책임감</p></div>
+                    <div class="txt_area">
+                        <p class="t1">정해진 기한과 목표를 반드시 준수하며, 맡은 파트의 역할과 일정은 철저하게 지킴.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="bg" id="page3">
+            <h2 class="title1">같이 하고 싶은 사람</h2>
+            <div class="center_wrap">
+                <div class="box q_box">
+                    <div class="txt_area">
+                        <p class="t1 q_txt">
+                            " 평소 생각하지 못했던<br>창의적인 아이디어를 내는 사람 "
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg" id="page4">
+            <h2 class="title1">나의 목표</h2>
+            <div class="center_wrap">
+                <div class="box g_box">
+                    <div class="txt_area g_in">
+                        <p class="t1 g_t1">
+                            어떤 서비스든 사용자가 원하는 바와 문제점을 파악해<br>
+                            알맞은 해결책을 제공하는 것이 중요합니다.
+                        </p>
+                        <p class="t1 g_t2">
+                            이번 프로젝트를 통해 사용자의 니즈를 분석하고,<br>
+                            이를 실제 결과물로 구현해 내는 실행력을 기르고 싶습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="base_div"></div>
-        
-        <div class="base_div"></div>
     </div>
-	
 </body>
 </html>
